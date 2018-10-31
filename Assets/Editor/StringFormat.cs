@@ -124,6 +124,37 @@ public static class StringFormat{
         
     }
 
+    private static float GetCpuTimeInfo(string info,string name)
+    {
+        int index = info.IndexOf(name);
+        index += (name.Length+2);
+        int startIndex = index;
+        while (info[index] != 'm')
+        {
+            index++;
+        }
+        return float.Parse(info.Substring(startIndex, index - startIndex));
+    }
+
+    public static float GetCpuRenderingTime(string info) //单位毫秒
+    {
+        return GetCpuTimeInfo(info, "Rendering");
+    }
+
+    public static float GetCpuScriptsTime(string info)
+    {
+        return GetCpuTimeInfo(info, "Scripts");
+    }
+
+    public static float GetCpuUiTime(string info)
+    {
+        return GetCpuTimeInfo(info, "UI");
+    }
+
+    public static float GetCpuAnimationTime(string info)
+    {
+        return GetCpuTimeInfo(info, "Animation");
+    }
 
     private static void AddUnitString(StringBuilder info, string unitFormat)
     {
@@ -162,6 +193,10 @@ public static class StringFormat{
     public static string GetExportGeometryInfo(Property property)
     {
         return GetExportInfo(property, "k");
+    }
+    public static string GetExportTimeConsumingInfo(Property property)
+    {
+        return GetExportInfo(property, "ms");
     }
 
 }

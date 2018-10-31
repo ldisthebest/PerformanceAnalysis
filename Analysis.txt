@@ -1,8 +1,0 @@
-Mono--最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 
-Texture--最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 
-Mesh--最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 
-Animation--最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 
-Audio--最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 
-GameObject--最小: 0     最大: 0     平均: 0     结果: 
-DrawCalls--最小: 0     最大: 0     平均: 0     结果: 
-Tris--最小: 0 k    最大: 0 k    平均: 0 k    结果: 

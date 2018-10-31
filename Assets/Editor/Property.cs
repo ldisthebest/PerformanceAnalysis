@@ -51,7 +51,7 @@ public class Property{
 
     public virtual void UpdateValueEveryFrame(int frame,float frameValue)
     {
-        if (frame == Analysis.firstFrame)//对于第一帧的情况
+        if (frame == MainEditor.firstFrame)//对于第一帧的情况
         {
             minValue = frameValue;
             maxValue = frameValue;
@@ -77,7 +77,7 @@ public class Property{
 
         if (standardData.LimitValue == -1)
         {
-            result = "不确定";
+            result = "unknow";
         }
         else if((maxValue <= standardData.LimitValue && standardData.Compare == CompareType.LessThan)||
             (averageValue >= standardData.LimitValue && standardData.Compare == CompareType.GreaterThan))

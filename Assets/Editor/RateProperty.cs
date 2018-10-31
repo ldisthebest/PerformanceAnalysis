@@ -27,7 +27,7 @@ public class RateProperty : Property {
         float rate = qulifiedFrame / frameCount;
         if(standardData.LimitValue == -1)
         {
-            result = "不确定";
+            result = "unknow";
         }
         else if((standardData.Compare == CompareType.GreaterThan && rate >= standardData.LimitValue)||
             (standardData.Compare == CompareType.LessThan && rate <= standardData.LimitValue))

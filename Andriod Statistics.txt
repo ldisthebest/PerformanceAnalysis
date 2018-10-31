@@ -1,0 +1,39 @@
+﻿MonoMemory--
+最小: 0.8 MB    最大: 0.8 MB    平均: 0.8 MB    结果: 合格
+
+TextureMemory--
+最小: 113.5 MB    最大: 113.5 MB    平均: 113.5 MB    结果: 不合格
+
+MeshMemory--
+最小: 0.01464844 MB    最大: 0.01464844 MB    平均: 0.01464844 MB    结果: 合格
+
+AnimationMemory--
+最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 合格
+
+AudioMemory--
+最小: 0 MB    最大: 0 MB    平均: 0 MB    结果: 合格
+
+GameObjects--
+最小: 21     最大: 21     平均: 21     结果: 合格
+
+DrawCalls--
+最小: 54     最大: 60     平均: 54.00897     结果: 合格
+
+FPS--
+最小: 57.1     最大: 63.8     平均: 60.38909     结果: 合格
+
+Tris--
+最小: 0 k    最大: 10.2 k    平均: 0.01524664 k    结果: 合格
+
+CpuRenderingTime--
+最小: 0.29 ms    最大: 2.2 ms    平均: 0.76713 ms    结果: unknow
+
+CpuAnimationTime--
+最小: 0 ms    最大: 0.01 ms    平均: 2.989537E-05 ms    结果: unknow
+
+CpuScriptsTime--
+最小: 0.1 ms    最大: 0.96 ms    平均: 0.2514051 ms    结果: unknow
+
+CpuUiTime--
+最小: 0 ms    最大: 0.03 ms    平均: 0.006502242 ms    结果: unknow
+

@@ -18,10 +18,13 @@ public class MainEditor : EditorWindow
     [MenuItem("性能分析/Andriod")]
     static void AndriodAnalysis()
     {
+
+        Debug.Log(labelTitle + firstFrame);
         ProfilerDriver.enabled = true;
         labelTitle = ANDRIOD_PLATFORM;
  
         GetWindow<MainEditor>();
+        
     }
 
     [MenuItem("性能分析/PC")]
@@ -35,6 +38,12 @@ public class MainEditor : EditorWindow
     void OnGUI()
     {
         GUILayout.Label(labelTitle);
+
+        //if (GUILayout.Button("Test"))
+        //{
+        //    Debug.Log(continuousFrame);
+
+        //}
         if (over)
         {
             GUILayout.Label("Done!");
@@ -45,9 +54,9 @@ public class MainEditor : EditorWindow
             if (GUILayout.Button("begin"))
             {
                 analysis = true;
-                continuousFrame = ProfilerDriver.lastFrameIndex;
+                continuousFrame = ProfilerDriver.lastFrameIndex;               
+                firstFrame = ProfilerDriver.firstFrameIndex;//先获得第一帧再进行统计
                 DataStatistics.Instance.UpdateProperties();
-                firstFrame = ProfilerDriver.firstFrameIndex;
             }
         }
         else
@@ -59,6 +68,7 @@ public class MainEditor : EditorWindow
                 analysis = false;
                 DataStatistics.Instance.UpdateProperties();
                 DataStatistics.Instance.ExportTxtResult();
+                CleanUp();
             }
         }
                
@@ -72,6 +82,12 @@ public class MainEditor : EditorWindow
             DataStatistics.Instance.UpdateProperties();
             continuousFrame = ProfilerDriver.lastFrameIndex;
         }
+    }
+
+    void CleanUp()//每次测试完数据需要清空静态数据
+    {
+        labelTitle = "";
+        firstFrame = 0;
     }
 
 
